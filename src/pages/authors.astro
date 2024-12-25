@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthorCard from '../components/authors/AuthorCard.astro';
+import { authors } from '../data/authors';
+---
+
+<Layout title="Authors | Conference 2024">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-8 text-blue-900">Authors</h1>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {authors.map(author => (
+        <AuthorCard {...author} />
+      ))}
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,20 @@
+---
+const dates = [
+  { event: 'Paper Submission Deadline', date: 'April 1, 2024' },
+  { event: 'Author Notification', date: 'May 1, 2024' },
+  { event: 'Camera-Ready Submission', date: 'May 15, 2024' },
+  { event: 'Conference Dates', date: 'June 15-17, 2024' }
+];
+---
+
+<section class="mb-16">
+  <h2 class="text-3xl font-semibold mb-6">Important Dates</h2>
+  <div class="grid gap-4">
+    {dates.map(({ event, date }) => (
+      <div class="flex justify-between items-center border-b pb-4">
+        <span class="font-medium">{event}</span>
+        <span class="text-gray-600">{date}</span>
+      </div>
+    ))}
+  </div>
+</section>

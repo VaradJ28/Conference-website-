@@ -1,0 +1,28 @@
+---
+const navItems = [
+  { href: '/papers', label: 'Papers' },
+  { href: '/schedule', label: 'Schedule' },
+  { href: '/authors', label: 'Authors' },
+  { href: '/about', label: 'About' }
+];
+---
+
+<nav class="bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold tracking-tight hover:text-blue-100 transition-colors">
+        Research Conference 2024
+      </a>
+      <div class="space-x-6">
+        {navItems.map(item => (
+          <a 
+            href={item.href}
+            class="text-blue-100 hover:text-white font-medium transition-colors duration-200"
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</nav>

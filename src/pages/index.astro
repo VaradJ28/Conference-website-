@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeaturedPapers from '../components/papers/FeaturedPapers.astro';
+import ImportantDates from '../components/conference/ImportantDates.astro';
+---
+
+<Layout title="Research Conference 2024">
+  <div class="max-w-4xl mx-auto">
+    <section class="hero-gradient text-white rounded-2xl p-12 mb-16 text-center shadow-xl">
+      <h1 class="text-5xl font-bold mb-4">Research Conference 2024</h1>
+      <p class="text-xl text-blue-100 mb-8">Advancing Knowledge Through Innovation</p>
+      <div class="glass-card p-6 rounded-lg inline-block">
+        <p class="text-blue-900 font-semibold">
+          June 15-17, 2024 • Virtual & In-Person • University Conference Center
+        </p>
+      </div>
+    </section>
+
+    <div class="glass-card rounded-xl p-8 mb-12">
+      <FeaturedPapers />
+      <div class="section-divider"></div>
+      <ImportantDates />
+    </div>
+  </div>
+</Layout>

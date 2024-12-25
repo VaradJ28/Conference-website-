@@ -1,0 +1,36 @@
+---
+const featuredPapers = [
+  {
+    id: 1,
+    title: 'Advances in Machine Learning Applications for Climate Change',
+    authors: ['Dr. Sarah Johnson', 'Dr. Michael Chen']
+  },
+  {
+    id: 2,
+    title: 'Quantum Computing: Breaking New Ground in Optimization',
+    authors: ['Prof. David Smith', 'Dr. Lisa Wong']
+  }
+];
+---
+
+<section class="mb-16">
+  <h2 class="text-3xl font-semibold mb-6 text-blue-900">Featured Papers</h2>
+  <div class="grid gap-6">
+    {featuredPapers.map(paper => (
+      <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-600">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">
+          {paper.title}
+        </h3>
+        <p class="text-gray-600 mb-4">
+          By {paper.authors.join(', ')}
+        </p>
+        <a href={`/papers/${paper.id}`} class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+          Read More 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    ))}
+  </div>
+</section>

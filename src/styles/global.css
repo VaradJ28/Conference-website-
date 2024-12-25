@@ -1,0 +1,25 @@
+/* Professional gradients and animations */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-gradient {
+  background: linear-gradient(-45deg, #1e40af, #1e3a8a, #172554);
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-divider {
+  height: 6px;
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  border-radius: 3px;
+  margin: 2rem 0;
+}
